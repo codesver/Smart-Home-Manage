@@ -1,0 +1,29 @@
+Input values to Join<br>
+
+<form action = '' method = 'POST'>
+    {% csrf_token %}
+    ID<br>
+    {% if exist %}
+        <input name = 'rsn' type = 'text' value = {{rid}}>
+        <input type = 'submit' value = 'Check' name = 'ex'/>
+        <label for="jb-input-text">Possible</label> 
+    {% else %}
+        <input name = 'rsn' type = 'text'>
+        <input type = 'submit' value = 'Check' name = 'ex'/>
+    {% endif %}
+    <br>
+    
+    PW<br>
+    <input name = 'pw' type = 'text'> <br>
+    Home Number<br>
+    <input name = 'hsn' type = 'text'> <br>
+    Name<br>
+    <input name = 'rname' type = 'text'> <br>
+    Age<br>
+    <input name = 'age' type = 'text'> <br>
+    Authority<br>
+    <input name = 'authority' type = 'text'> <br>
+    <input type = "submit" value = "Sign Up" name = 'join'/>
+    <a href="login">Backward</a>
+</form>
+
