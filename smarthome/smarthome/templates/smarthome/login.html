@@ -1,0 +1,20 @@
+Please insert your Serial Number and Home password <br>
+If you're new, press Join <br> <br>
+
+<form action = '' method = 'POST'>
+    {% csrf_token %}
+    Home Number <br>
+    <input name = 'hsn' type = 'text'> <br>
+    User RSN <br>
+    <input name = 'rsn' type = 'text'> <br>
+    Password <br>
+    <input name = 'pw' type = 'password'>
+
+    <br>
+    <input type = 'submit' value = 'LOGIN'>
+    <a href='join'>Join</a>
+    {% if exist == True %}
+        <a href='main'>Main</a>
+    {% else %}
+    {% endif %}
+</form>

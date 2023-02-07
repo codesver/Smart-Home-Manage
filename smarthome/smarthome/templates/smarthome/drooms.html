@@ -1,0 +1,60 @@
+Dining Room Manage <br>
+<form action = '' method = 'POST'>
+    {% csrf_token %}
+    <!-- IOT -->
+    IOT<br>
+
+    <!-- Air Conditioner -->
+    Air Conditioner &nbsp;
+    {% if estate == 0 %}
+        Blocked
+    {% elif acstate %}
+        ON &emsp;&emsp;&emsp;
+        <input type = 'submit' value = 'AC OFF' name = 'AC'/>
+    {% else %}
+        OFF &emsp;&emsp;&emsp;
+        <input type = 'submit' value = 'AC ON' name = 'AC'/>
+    {% endif%}
+    <br>
+
+    <!-- Light -->
+    Light &emsp;&emsp;&emsp;&emsp;&emsp;
+    {% if estate == 0 %}
+        Blocked
+    {% elif lstate %}
+        ON &emsp;&emsp;&emsp;
+        <input type = 'submit' value = 'Light OFF' name = 'L'/>
+    {% else %}
+        OFF &emsp;&emsp;&emsp;
+        <input type = 'submit' value = 'Light ON' name = 'L'/>
+    {% endif%}
+    <br>
+    <br>
+
+    <!-- Power -->
+    Power <br>
+
+    <!-- Electric -->
+    Electricity &emsp;&emsp;&emsp;
+    {% if estate %}
+        ON &emsp;&emsp;&emsp;
+        <input type = 'submit' value = 'Electricity OFF' name = 'E'/>
+    {% else %}
+        OFF &emsp;&emsp;&emsp;
+        <input type = 'submit' value = 'Electricity ON' name = 'E'/>
+    {% endif%}
+    <br>
+
+    <!-- Water -->
+    Water &emsp;&emsp;&emsp;&emsp;&ensp;
+    {% if wstate %}
+        ON &emsp;&emsp;&emsp;
+        <input type = 'submit' value = 'Water OFF' name = 'W'/>
+    {% else %}
+        OFF &emsp;&emsp;&emsp;
+        <input type = 'submit' value = 'Water ON' name = 'W'/>
+    {% endif%}
+    <br>
+    
+    <a href='main'>Backward</a>
+</form>
